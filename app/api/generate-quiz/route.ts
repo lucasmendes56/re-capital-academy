@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { getLessonById } from "@/lib/curriculum";
 import { LESSON_CONTENT } from "@/lib/lessonContent";
 
+export const maxDuration = 60;
+
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 export async function POST(req: NextRequest) {
